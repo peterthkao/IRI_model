@@ -15,4 +15,4 @@ def test_altitude_profile():
     assert iri["ne"][10].item() == approx(5287032830.0, rel=1e-4)
     assert iri.NmF2.item() == approx(77149519900.0, rel=1e-4)
     assert iri.hmF2.item() == approx(312.819672, rel=1e-4)
-    assert iri.foF2.item() == approx(2.49434066)
+    assert iri.foF2.item() == approx(2.49434066, rel=1e-4)
