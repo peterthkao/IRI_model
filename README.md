@@ -142,8 +142,8 @@ no rebuild needed.
 Two licenses apply:
 
 * The Python/Matlab wrapper code is **MIT** licensed
-  ([LICENSE.txt](./LICENSE.txt)), © Michael Hirsch and Ronald Ilma
-  (space-physics project) with modifications by Tzu-Hsun Kao.
+  ([LICENSE.txt](./LICENSE.txt)) — © 2026 Tzu-Hsun Kao;
+  © Michael Hirsch and Ronald Ilma (space-physics project).
 * The IRI Fortran source and coefficient data are © the **International
   Reference Ionosphere** project (COSPAR/URSI); see
   `src/iriXXXX/src/00_iri-License.txt`. Scientific publications using

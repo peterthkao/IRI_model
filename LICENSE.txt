@@ -1,5 +1,6 @@
-MIT License
+﻿MIT License
 
+Copyright (c) 2026 Tzu-Hsun Kao
 Copyright (c) 2018 Michael Hirsch, Ph.D.
 Copyright (c) 2017 Ronald Ilma
 
