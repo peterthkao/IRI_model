@@ -1,0 +1,6 @@
+src/iri2016/src/* linguist-vendored
+src/iri2020/src/* linguist-vendored
+src/iri2026/src/* linguist-vendored
+src/iri2016/data/** -text
+src/iri2020/data/** -text
+src/iri2026/data/** -text

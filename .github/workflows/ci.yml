@@ -1,0 +1,41 @@
+name: ci
+
+env:
+  CMAKE_BUILD_TYPE: Release
+
+on:
+  push:
+    paths:
+    - "**.py"
+    - "**.for"
+    - "**.f90"
+    - "**/CMakeLists.txt"
+    - ".github/workflows/ci.yml"
+  pull_request:
+
+jobs:
+
+  core:
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        python: ['3.9', '3.12']
+
+    runs-on: ${{ matrix.os }}
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python }}
+
+    - name: install gfortran (macOS)
+      if: runner.os == 'macOS'
+      run: echo "FC=gfortran-14" >> $GITHUB_ENV
+
+    - run: pip install .[tests,lint]
+      timeout-minutes: 5
+
+    - run: flake8
+
+    - run: pytest

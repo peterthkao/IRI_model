@@ -1,0 +1,21 @@
+﻿include src/iri2016/CMakeLists.txt src/iri2016/src/CMakeLists.txt
+recursive-include src/iri2016/src *.for *.f90 *.txt
+recursive-include src/iri2016/data/ccir *.asc
+recursive-include src/iri2016/data/igrf *.dat
+recursive-include src/iri2016/data/index *.dat
+recursive-include src/iri2016/data/mcsat *.dat
+recursive-include src/iri2016/data/ursi *.asc
+include src/iri2020/CMakeLists.txt src/iri2020/src/CMakeLists.txt
+recursive-include src/iri2020/src *.for *.f90 *.txt
+recursive-include src/iri2020/data/ccir *.asc
+recursive-include src/iri2020/data/igrf *.dat
+recursive-include src/iri2020/data/index *.dat
+recursive-include src/iri2020/data/mcsat *.dat
+recursive-include src/iri2020/data/ursi *.asc
+include src/iri2026/CMakeLists.txt src/iri2026/src/CMakeLists.txt
+recursive-include src/iri2026/src *.for *.f90 *.txt
+recursive-include src/iri2026/data/ccir *.asc
+recursive-include src/iri2026/data/igrf *.dat
+recursive-include src/iri2026/data/index *.dat
+recursive-include src/iri2026/data/mcsat *.dat
+recursive-include src/iri2026/data/ursi *.asc

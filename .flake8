@@ -1,0 +1,5 @@
+[flake8]
+max-line-length = 100
+exclude = .git,__pycache__,.eggs/,doc/,docs/,build/,dist/,.archive/
+# A005: time.py / profile.py module names are the established public CLI API
+extend-ignore = A005
