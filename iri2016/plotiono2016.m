@@ -1,4 +1,4 @@
-function plotiono(iono, times, glat, glon)
+﻿function plotiono2016(iono, times, glat, glon)
 arguments
   iono struct
   times datetime

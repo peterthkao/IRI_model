@@ -6,7 +6,7 @@ end
 
 function checkTask(~)
 % Identify code issues (recursively all Matlab .m files)
-for pkg = ["+iri2016", "+iri2020", "+iri2026"]
+for pkg = ["iri2016", "iri2020", "iri2026"]
   issues = codeIssues(pkg);
   assert(isempty(issues.Issues), formattedDisplayText(issues.Issues))
 end

@@ -1,4 +1,4 @@
-﻿classdef TestUnit < matlab.unittest.TestCase
+﻿classdef TestUnit2026 < matlab.unittest.TestCase
 
 methods (Test)
 
@@ -8,7 +8,7 @@ glat = 65.1;
 glon = -147.5;
 altkmrange = [100,1000,10];
 
-iono = iri2026.iri2026(time, glat, glon, altkmrange);
+iono = iri2026(time, glat, glon, altkmrange);
 
 tc.verifyEqual(iono.Ne(11), 5.287032830e9, 'RelTol', 1e-4)
 end

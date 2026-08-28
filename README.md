@@ -14,9 +14,9 @@ for a given time and location.
 
 | Model | Python | Matlab |
 |---|---|---|
-| IRI-2016 | `import iri2016` | `iri2016.iri2016(...)` |
-| IRI-2020 | `import iri2020` | `iri2020.iri2020(...)` |
-| IRI-2026 | `import iri2026` | `iri2026.iri2026(...)` |
+| IRI-2016 | `import iri2016` | `addpath('iri2016'); iri2016(...)` |
+| IRI-2020 | `import iri2020` | `addpath('iri2020'); iri2020(...)` |
+| IRI-2026 | `import iri2026` | `addpath('iri2026'); iri2026(...)` |
 
 This repository is derived from
 [space-physics/iri2016](https://github.com/space-physics/iri2016) (MIT
@@ -95,12 +95,16 @@ pytest
 
 ## Matlab
 
-The three `+iri2016`, `+iri2020`, `+iri2026` packages work directly from
-Matlab (R2019b or newer). From the repository root:
+The `iri2016`, `iri2020`, `iri2026` folders work directly from Matlab
+(R2019b or newer). Add the folder of the model you want to the path;
+plotting helpers carry the model year in their name (`plotiono2026`,
+`plottime2026`, ...) so several models can be on the path at once.
+From the repository root:
 
 ```matlab
-iono = iri2026.iri2026(datetime(2021,6,1,12,0,0), 65.1, -147.5, [100 1000 10]);
-iri2026.plotiono(iono, datetime(2021,6,1,12,0,0), 65.1, -147.5)
+addpath('iri2026')
+iono = iri2026(datetime(2021,6,1,12,0,0), 65.1, -147.5, [100 1000 10]);
+plotiono2026(iono, datetime(2021,6,1,12,0,0), 65.1, -147.5)
 ```
 
 Verify everything works:

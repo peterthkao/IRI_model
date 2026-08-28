@@ -1,4 +1,4 @@
-function plottime(iri, times, glat, glon)
+﻿function plottime2016(iri, times, glat, glon)
 arguments
   iri struct
   times datetime

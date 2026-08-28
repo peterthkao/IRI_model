@@ -7,12 +7,12 @@ t1 = datetime(2004,11,22,0,0,0);
 ts = seconds(3600);
 
 cwd = fileparts(mfilename('fullpath'));
-addpath(fullfile(cwd, '..'));
+addpath(fullfile(cwd, '..', 'iri2020'));
 
 times = t0:ts:t1;
 
 for i = 1:length(times)
-  iri(i) = iri2020.iri2020(times(i), glat, glon, altkmrange); %#ok<SAGROW>
+  iri(i) = iri2020(times(i), glat, glon, altkmrange); %#ok<SAGROW>
 end
 
-iri2020.plottime(iri, times, glat, glon)
+plottime2020(iri, times, glat, glon)
